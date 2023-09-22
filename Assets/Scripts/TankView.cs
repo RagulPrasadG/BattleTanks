@@ -6,4 +6,10 @@ public class TankView : MonoBehaviour
 {
     private TankController tankController;
 
+    public void SetController(TankController tankController)
+    {
+        this.tankController = tankController;
+    }
+
+ 
 }
