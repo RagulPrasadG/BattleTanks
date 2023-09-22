@@ -12,7 +12,7 @@ public class TankSpawner : MonoBehaviour
 
     private void CreateTank()
     {
-        TankModel tankmodel = new TankModel();
+        TankModel tankmodel = new TankModel(10,50);
         TankController tankController = new TankController(tankmodel, tankView);
 
     }
