@@ -5,6 +5,7 @@ using UnityEngine;
 public class TankView : MonoBehaviour
 {
     private TankController tankController;
+    [SerializeField] MeshRenderer[] renderers;
     [SerializeField] Rigidbody rb;
 
     float movement;
@@ -27,6 +28,14 @@ public class TankView : MonoBehaviour
     }
 
     public Rigidbody GetRigidbody() => rb;
+
+    public void ChangeColor(Material color)
+    {
+        foreach(MeshRenderer renderer in renderers)
+        {
+            renderer.material = color;
+        }
+    }
 
     private void ProcessInput()
     {

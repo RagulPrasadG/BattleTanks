@@ -9,10 +9,13 @@ public class TankModel
     private TankController tankController;
     public  float movementSpeed;
     public  float rotationSpeed;
-    public TankModel(float movementSpeed, float rotationSpeed)
+    public Material color;
+
+    public TankModel(float movementSpeed, float rotationSpeed, Material material)
     {
         this.movementSpeed = movementSpeed;
         this.rotationSpeed = rotationSpeed;
+        this.color = material;   
     }
 
 
