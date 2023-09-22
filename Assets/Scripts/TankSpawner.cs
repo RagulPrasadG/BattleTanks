@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class TankSpawner : MonoBehaviour
 {
-    [SerializeField] GameObject tankPrefab;
+    [SerializeField] TankView tankView;
     private void Start()
     {
-        if(tankPrefab)
-        Instantiate(tankPrefab, this.transform.position, Quaternion.identity);
+        CreateTank();
+    }
+
+    private void CreateTank()
+    {
+        TankModel tankmodel = new TankModel();
+        TankController tankController = new TankController(tankmodel, tankView);
+
     }
 }
