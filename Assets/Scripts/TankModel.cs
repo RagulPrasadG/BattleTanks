@@ -9,13 +9,19 @@ public class TankModel
     private TankController tankController;
     public  float movementSpeed;
     public  float rotationSpeed;
+    public float turretTurnSpeed;
+    public float fireRate;
+    public float bulletForce;
     public Material color;
 
-    public TankModel(float movementSpeed, float rotationSpeed, Material material)
+    public float turretRotation = 0f;
+    public TankModel(float movementSpeed, float rotationSpeed, Material material,float fireRate,float bulletForce)
     {
         this.movementSpeed = movementSpeed;
         this.rotationSpeed = rotationSpeed;
-        this.color = material;   
+        this.color = material;
+        this.fireRate = fireRate;
+        this.bulletForce = bulletForce;
     }
 
 
