@@ -53,12 +53,14 @@ public class TankController
             tankView.AdsCamera.Priority = 10;
             tankView.followCamera.Priority = 0;
             tankView.postProcessVolume.weight = 1;
+            tankView.crosshair.gameObject.SetActive(true);
         }
         else
         {
             tankView.AdsCamera.Priority = 0;
             tankView.followCamera.Priority = 10;
             tankView.postProcessVolume.weight = 0;
+            tankView.crosshair.gameObject.SetActive(false);
         }
             
 
@@ -66,7 +68,6 @@ public class TankController
 
     public void Rotate(float rotate, float rotationSpeed)
     {
-        Debug.Log("rotating");
         float yDeltaRotation = rb.rotation.eulerAngles.y + rotate * rotationSpeed * Time.deltaTime;
         Quaternion rotation = Quaternion.Euler(new Vector3(0f,yDeltaRotation,0f));
         rb.MoveRotation(rotation);

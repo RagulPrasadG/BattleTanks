@@ -107,7 +107,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7690375998896045470}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.13949688
   m_Height: 0.4952011
@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd7bf3d359bc5c468b0ff2767deae24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  burstEffect: {fileID: 740325151761439746}
 --- !u!1001 &2207410881180445473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -140,17 +141,17 @@ PrefabInstance:
     - target: {fileID: 1505439560577890080, guid: 7aeb468d853b4f040bc74708d436509e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.15577684
+      value: 0.6946829
       objectReference: {fileID: 0}
     - target: {fileID: 1505439560577890080, guid: 7aeb468d853b4f040bc74708d436509e,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.15577684
+      value: 0.6946829
       objectReference: {fileID: 0}
     - target: {fileID: 1505439560577890080, guid: 7aeb468d853b4f040bc74708d436509e,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.15577684
+      value: 0.6946829
       objectReference: {fileID: 0}
     - target: {fileID: 1505439560577890080, guid: 7aeb468d853b4f040bc74708d436509e,
         type: 3}
@@ -212,6 +213,12 @@ PrefabInstance:
 --- !u!4 &740325151761439745 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1505439560577890080, guid: 7aeb468d853b4f040bc74708d436509e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2207410881180445473}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &740325151761439746 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1505439560577890083, guid: 7aeb468d853b4f040bc74708d436509e,
     type: 3}
   m_PrefabInstance: {fileID: 2207410881180445473}
   m_PrefabAsset: {fileID: 0}

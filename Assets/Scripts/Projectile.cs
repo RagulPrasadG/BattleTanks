@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    [SerializeField] ParticleSystem burstEffect;
+ 
+    private void OnCollisionEnter(Collision other)
     {
-        if(!other.gameObject.CompareTag("Tank"))
-        Destroy(this.gameObject);
+        if (!other.gameObject.CompareTag("Tank"))
+        {
+            burstEffect.Play();
+            Destroy(this.gameObject,0.5f);
+        }
     }
+
+
+
+
 }

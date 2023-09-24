@@ -14,16 +14,16 @@ public class TankView : MonoBehaviour
     public CinemachineVirtualCamera AdsCamera;
     public CinemachineVirtualCamera followCamera;
     public Volume postProcessVolume;
+    public RectTransform crosshair;
     [SerializeField] MeshRenderer[] renderers;
     [SerializeField] Rigidbody tankrb;
 
     float movement;
     float rotation;
     float mouseX;
-
     float fireInterval;
 
-    
+
     private void Start()
     {
         SetFollowCamera();
@@ -31,6 +31,7 @@ public class TankView : MonoBehaviour
 
     private void SetFollowCamera()
     {
+        crosshair = GameObject.Find("HUD").transform.GetChild(0) as RectTransform;
         followCamera = GameObject.Find("FollowCamera").GetComponent<CinemachineVirtualCamera>();
         followCamera.Follow = turrentRoot;
         followCamera.LookAt = turrentRoot;
